@@ -1,0 +1,26 @@
+# Xcode
+DerivedData/
+build/
+*.xccheckout
+*.xcscmblueprint
+*.moved-aside
+xcuserdata/
+*.xcuserstate
+*.xcbkptlist
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V8
+.Trashes
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
