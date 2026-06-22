@@ -8,6 +8,10 @@
 import Cocoa
 import UniformTypeIdentifiers
 
+private class RecentDocumentController: NSDocumentController {
+    override var maximumRecentDocumentCount: Int { 6 }
+}
+
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -16,6 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var viewController: ViewController?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        _ = RecentDocumentController()
         let vc = ViewController()
         viewController = vc
         window.contentViewController = vc
@@ -30,7 +35,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool { true }
 
     func application(_ sender: NSApplication, openFile filename: String) -> Bool {
-        viewController?.openFile(url: URL(fileURLWithPath: filename))
+        let url = URL(fileURLWithPath: filename)
+        viewController?.openFile(url: url)
+        NSDocumentController.shared.noteNewRecentDocumentURL(url)
         return true
     }
 
@@ -44,9 +51,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         panel.allowsMultipleSelection = false
         panel.canChooseDirectories = false
         panel.beginSheetModal(for: window) { [weak self] response in
-            if response == .OK, let url = panel.url {
-                self?.viewController?.openFile(url: url)
-            }
+            guard let self, response == .OK, let url = panel.url else { return }
+            viewController?.openFile(url: url)
+            NSDocumentController.shared.noteNewRecentDocumentURL(url)
         }
     }
 }
