@@ -6,19 +6,46 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		12822448B404F59DC602B1FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04150F8A77BC5EE9077D25A /* Foundation.framework */; };
+		6ED93609474906DC04C476D6 /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9097C158C97AE9DCE7EDE5C /* MarkdownRenderer.swift */; };
+		8F238304102CAE2BCBF528A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36331D65D53E6B4CBB539304 /* SceneDelegate.swift */; };
+		BF49D060F8D8D7E37699892C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D148F5FB207CCE91BE4F53F /* AppDelegate.swift */; };
+		D9EB12FC986C1109B37B46FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392BBB9636720143BF46732B /* ViewController.swift */; };
+		EE671BBD825596B099635D56 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC02939E97818EFA86B0823 /* WebKit.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		36331D65D53E6B4CBB539304 /* SceneDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		392BBB9636720143BF46732B /* ViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D148F5FB207CCE91BE4F53F /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A9097C158C97AE9DCE7EDE5C /* MarkdownRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownRenderer.swift; path = ../MarkdownReader/MarkdownRenderer.swift; sourceTree = "<group>"; };
+		AAC02939E97818EFA86B0823 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		AF7A65A12FCB995D00A7EACB /* MarkdownReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkdownReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D04150F8A77BC5EE9077D25A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FE2B570405F4FCEEF76A08F4 /* MarkdownReaderIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkdownReaderIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		AF7A65A32FCB995D00A7EACB /* MarkdownReader */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = MarkdownReader;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3BEAA2572CCEABD106C03D87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12822448B404F59DC602B1FB /* Foundation.framework in Frameworks */,
+				EE671BBD825596B099635D56 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF7A659E2FCB995D00A7EACB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,11 +56,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C37F9B3AB178B6F19248B77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6564913CC7367048337FE74B /* iOS */,
+				AAC02939E97818EFA86B0823 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6564913CC7367048337FE74B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D04150F8A77BC5EE9077D25A /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		AF7A65982FCB995D00A7EACB = {
 			isa = PBXGroup;
 			children = (
 				AF7A65A32FCB995D00A7EACB /* MarkdownReader */,
 				AF7A65A22FCB995D00A7EACB /* Products */,
+				1C37F9B3AB178B6F19248B77 /* Frameworks */,
+				FA91939D3DD4BE03D70A04A0 /* MarkdownReaderIOS */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,8 +87,21 @@
 			isa = PBXGroup;
 			children = (
 				AF7A65A12FCB995D00A7EACB /* MarkdownReader.app */,
+				FE2B570405F4FCEEF76A08F4 /* MarkdownReaderIOS.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FA91939D3DD4BE03D70A04A0 /* MarkdownReaderIOS */ = {
+			isa = PBXGroup;
+			children = (
+				9D148F5FB207CCE91BE4F53F /* AppDelegate.swift */,
+				36331D65D53E6B4CBB539304 /* SceneDelegate.swift */,
+				392BBB9636720143BF46732B /* ViewController.swift */,
+				A9097C158C97AE9DCE7EDE5C /* MarkdownRenderer.swift */,
+			);
+			name = MarkdownReaderIOS;
+			path = MarkdownReaderIOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -64,10 +123,25 @@
 				AF7A65A32FCB995D00A7EACB /* MarkdownReader */,
 			);
 			name = MarkdownReader;
-			packageProductDependencies = (
-			);
 			productName = MarkdownReader;
 			productReference = AF7A65A12FCB995D00A7EACB /* MarkdownReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E89D3E123DFA973B35ADBF38 /* MarkdownReaderIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28D6793B2366E7C109C4F8FE /* Build configuration list for PBXNativeTarget "MarkdownReaderIOS" */;
+			buildPhases = (
+				2DBECCAE12CD9A489729820F /* Sources */,
+				3BEAA2572CCEABD106C03D87 /* Frameworks */,
+				398DF1B5AF0422F90FE1641A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarkdownReaderIOS;
+			productName = MarkdownReaderIOS;
+			productReference = FE2B570405F4FCEEF76A08F4 /* MarkdownReaderIOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -100,11 +174,19 @@
 			projectRoot = "";
 			targets = (
 				AF7A65A02FCB995D00A7EACB /* MarkdownReader */,
+				E89D3E123DFA973B35ADBF38 /* MarkdownReaderIOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		398DF1B5AF0422F90FE1641A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF7A659F2FCB995D00A7EACB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +197,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2DBECCAE12CD9A489729820F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF49D060F8D8D7E37699892C /* AppDelegate.swift in Sources */,
+				8F238304102CAE2BCBF528A3 /* SceneDelegate.swift in Sources */,
+				D9EB12FC986C1109B37B46FB /* ViewController.swift in Sources */,
+				6ED93609474906DC04C476D6 /* MarkdownRenderer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF7A659D2FCB995D00A7EACB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,9 +405,83 @@
 			};
 			name = Release;
 		};
+		B1FAFFACE2D9C6532B797C5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4D398WLJVB;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manuelolmosgil.MarkdownReaderIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4F0C13385FA04065E3A54E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4D398WLJVB;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manuelolmosgil.MarkdownReaderIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		28D6793B2366E7C109C4F8FE /* Build configuration list for PBXNativeTarget "MarkdownReaderIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1FAFFACE2D9C6532B797C5B /* Release */,
+				F4F0C13385FA04065E3A54E6 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AF7A659C2FCB995D00A7EACB /* Build configuration list for PBXProject "MarkdownReader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
