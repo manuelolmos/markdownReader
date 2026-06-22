@@ -10,12 +10,14 @@
 		12822448B404F59DC602B1FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04150F8A77BC5EE9077D25A /* Foundation.framework */; };
 		6ED93609474906DC04C476D6 /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9097C158C97AE9DCE7EDE5C /* MarkdownRenderer.swift */; };
 		BF49D060F8D8D7E37699892C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D148F5FB207CCE91BE4F53F /* AppDelegate.swift */; };
+		CE613DBF0E61C2A1990BAB18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50AFBAC50A414BDF6F4515CD /* Assets.xcassets */; };
 		D9EB12FC986C1109B37B46FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392BBB9636720143BF46732B /* ViewController.swift */; };
 		EE671BBD825596B099635D56 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC02939E97818EFA86B0823 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		392BBB9636720143BF46732B /* ViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50AFBAC50A414BDF6F4515CD /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D148F5FB207CCE91BE4F53F /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9097C158C97AE9DCE7EDE5C /* MarkdownRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarkdownRenderer.swift; path = ../MarkdownReader/MarkdownRenderer.swift; sourceTree = "<group>"; };
 		AAC02939E97818EFA86B0823 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -96,6 +98,7 @@
 				9D148F5FB207CCE91BE4F53F /* AppDelegate.swift */,
 				392BBB9636720143BF46732B /* ViewController.swift */,
 				A9097C158C97AE9DCE7EDE5C /* MarkdownRenderer.swift */,
+				50AFBAC50A414BDF6F4515CD /* Assets.xcassets */,
 			);
 			name = MarkdownReaderIOS;
 			path = MarkdownReaderIOS;
@@ -181,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE613DBF0E61C2A1990BAB18 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
